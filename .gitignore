@@ -1,0 +1,87 @@
+# =========================
+# Archivos y carpetas de Python
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Entornos virtuales
+venv/
+.env/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Configuración de entorno
+*.env
+.env.*
+
+# =========================
+# Archivos de base de datos (SQLite)
+# =========================
+*.db
+*.sqlite3
+
+# =========================
+# Archivos de dependencias y caché
+# =========================
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+*.tmp
+*.bak
+*.swp
+
+# =========================
+# Archivos de herramientas y tests
+# =========================
+.coverage
+htmlcov/
+.tox/
+.nox/
+pytest_cache/
+.cache/
+.mypy_cache/
+.dmypy.json
+.pytest_cache/
+__snapshots__/
+
+# =========================
+# Archivos de IDEs y editores
+# =========================
+.vscode/
+.idea/
+*.iml
+
+# =========================
+# Archivos de documentación y builds
+# =========================
+build/
+dist/
+.eggs/
+*.egg-info/
+docs/_build/
+
+# =========================
+# Archivos de configuración de herramientas
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Archivos de docker o despliegue (opcional)
+# =========================
+docker-compose.override.yml
+*.pid
+*.seed
+
+# =========================
+# Archivos específicos del proyecto FastAPI
+# =========================
+# Archivos temporales de Uvicorn
+*.pid
+*.sock
