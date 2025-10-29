@@ -85,3 +85,9 @@ docker-compose.override.yml
 # Archivos temporales de Uvicorn
 *.pid
 *.sock
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+blog.db
