@@ -1,14 +1,3 @@
-"""Crear esquemas Pydantic para validación:
-
-Schema base con campos comunes
-
-Schema para creación (sin id ni timestamps)
-
-Schema para respuesta (con todos los campos)
-
-Schema para actualización (campos opcionales)
-"""
-
 from pydantic import BaseModel
 from datetime import datetime
 

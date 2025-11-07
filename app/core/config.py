@@ -1,5 +1,4 @@
-from sqlmodel import SQLModel, create_engine
-
+from sqlmodel import SQLModel, create_engine, Session
 # URL de conexión a SQLite
 DATABASE_URL = "sqlite:///./blog.db"
 
@@ -13,3 +12,7 @@ engine = create_engine(
 def init_db() -> None:
     """Inicializa la base de datos creando las tablas si no existen."""
     SQLModel.metadata.create_all(engine)
+    
+def get_session():
+    with Seccion(engine) as session:
+        yield session
