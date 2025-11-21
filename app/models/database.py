@@ -3,7 +3,7 @@ from sqlalchemy import Text, JSON, func
 from datetime import datetime
 
 
-class post(SQLModel, table= True):
+class PostModel(SQLModel, table= True):
     id: int | None = Field(default=None, primary_key=True)
     title: str = Field(max_length=255, nullable=False)
     content: str = Field(sa_column=Column(Text, nullable=False))

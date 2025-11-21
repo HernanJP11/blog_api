@@ -99,4 +99,3 @@ class BaseRepository:
             self.session.rollback()
             raise DatabaseError("Error desconocido en la base de datos.")
     
-    # hacer pruebas
