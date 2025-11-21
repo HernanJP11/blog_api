@@ -1,6 +1,7 @@
 from sqlmodel import SQLModel, Session, select
 from sqlalchemy.exc import OperationalError, DataError, SQLAlchemyError
 from app.exceptions.exceptions import DatabaseConnectionError, PostNotFoundError
+from typing import Type, Optional, List
 
 class BaseRepository:
     def __init__(self, session: Session, model: Type[SQLModel]): #Aprender Type Hint
@@ -21,6 +22,7 @@ class BaseRepository:
     def get_all(self) -> List[SQLModel]:
         list_object = self.session.exec(select(self.model)).all()
         return list_object
+    
     
     def create(self, obj: SQLModel) -> SQLModel:
         try:
@@ -97,4 +99,4 @@ class BaseRepository:
             self.session.rollback()
             raise DatabaseError("Error desconocido en la base de datos.")
     
-    
+    # hacer pruebas
